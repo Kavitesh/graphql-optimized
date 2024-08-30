@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of `npm pack`
+*.tgz
+
+# dotenv environment variables file
+.env
+
+# Coverage directory used by testing tools
+coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional dist folder (if you're building files)
+dist/
+
+# Ignore lockfiles (depending on your project setup, you may choose to keep these)
+package-lock.json
+yarn.lock
+
+# Ignore specific files or folders
+.DS_Store
+.idea/
+.vscode/
