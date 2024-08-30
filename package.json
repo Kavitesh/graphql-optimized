@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "populateDb": "node populateDb.js"
+    "populateDb": "node db/populateDb.js"
   },
   "dependencies": {
     "axios": "^1.7.5",
