@@ -1,14 +1,14 @@
 const express = require('express');
-const executableSchema = require('./executableSchema');
-const { graphqlHTTP } = require('express-graphql');
+const internalGraphqlEngine = require('./internalGraphqlEngine');
+const authorizationEngine = require('./authorizationEngine/authorizationEngine')
 
 const app = express();
 
-// To handle a GraphQL request
-app.use('/graphql', graphqlHTTP({
-  schema: executableSchema,
-  graphiql: true,
-}));
+// To handle a GraphQL request through authorization engine then pass to internal graphql server
+app.use('/graphql', express.json(), authorizationEngine);
+
+// Internal GraphQL server (to handle the filtered queries)
+app.use('/internal-graphql', internalGraphqlEngine);
 
 // Start the server
 app.listen(4000, () => {
